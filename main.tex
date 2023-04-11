@@ -1,0 +1,144 @@
+% lazy JMIR replication
+% This must be compiled to Word via Pandoc
+\documentclass[12pt]{article}
+% Best effort to mimick the JMIR style
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    top=1in,
+    bottom=1in,
+    right=1.25in,
+    left=1.25in
+}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\headclr}{\color{NavyBlue}}
+\geometry{a4paper}
+% \pagenumbering{gobble} % removes the page numbers for publication
+\usepackage{parskip}
+\usepackage{titlesec}  % Making headings look JMIR-like
+    \titlelabel{}  % remove the number before the section title
+    \titleformat*{\section}{\sffamily\bfseries\LARGE\headclr}
+    \titleformat*{\subsection}{\sffamily\bfseries\large\headclr}
+    \titleformat*{\subsubsection}{\sffamily\bfseries\headclr}
+    \titleformat*{\paragraph}{\sffamily\bfseries\itshape\headclr}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{fourier}  % for the math font
+\usepackage{tgheros}  % for the body font (not ideal, but close enough)
+
+\usepackage[obeyspaces,spaces,hyphens]{url}
+\usepackage{amsmath}
+\usepackage{multirow}
+
+\begin{document}
+
+% \subsection{Original Paper}
+
+% Author 1$^1$, PhD;
+% Author 2$^1$, PhD
+
+% $^1$Nara Institute of Science and Technology, Japan
+
+% This corresponds to the title of the paper
+\section{Natural Language Processing on Few/Low-Resource Realistic Medical Documents: Findings in the Real-MedNLP Shared Task}
+
+\subsection{Abstract}
+\textbf{Background:} 
+Your research background.
+
+\textbf{Objective:} 
+Objective of your research.
+
+\textbf{Methods:} 
+Methods of your research.
+
+\textbf{Results:} 
+Great results.
+
+\textbf{Conclusions:} 
+Fantastic conclusions.
+
+\textbf{Keywords:}
+NLP;
+Medicine
+
+% === Body text Starts ===
+\subsection{Introduction}  % Level 1 Heading
+
+Why and how important of your research is here. 
+
+Note that you cannot use footnotes (\verb|\footnote|) at all in JMIR.
+
+URLs should not be used in the text. Cite them.
+
+\subsection{Materials}  % Level 1 Heading
+
+% If you use level2-headings, you are not allowed to write text here, i.e. in between the (sub)headings.
+
+\subsubsection{Corpus}  % Level 2 Heading
+
+% No text here too, if you use level3-headings.
+
+\paragraph{Social Media corpus}  % Level 3 Heading
+
+No further heading levels available in JMIR.
+
+Organise your text inside up to 3 levels of headings.
+
+\paragraph{EHR corpus}  % Level 3 Heading
+
+\subsubsection{Dictionary}  % Level 2 Heading
+
+\subsubsection{Data Availability} % Level 2 Heading
+
+Our data will be available at ...
+
+\subsection{Methods}
+
+\begin{itemize}  % substitute for `description' environment
+    \item \textbf{Item A} Today
+    \item \textbf{Item B} Tomorrow
+\end{itemize}
+
+\subsubsection{Ethical considerations}
+
+% A template if your work is not human subject research
+This study did not require participants to be involved in any physical or mental intervention. 
+As this research did not use personally identifiable information, it was exempt from institutional review board approval in accordance with the Ethical Guidelines for Medical and Health Research Involving Human Subjects stipulated by the Japanese national government.
+
+\subsection{Results}
+
+Tables and figures. No interpretations of the results here.
+
+\subsection{Discussions}
+
+\subsubsection{Conclusions}
+
+\subsubsection{Future work}
+
+% === Body text Ends ===
+
+\subsubsection{Acknowledgements}  % somehow the acknowledgements section is "level 2" in JMIR
+
+This work was supported by JST AIP Trilateral AI Research Grant Number JPMJCR20G9, and JST AIP-PRISM Grant Number JPMJCR18Y1, Japan.
+
+% Put the author contributions here
+
+\subsubsection{Conflicts of Interest}
+Nothing to disclose.
+
+\subsubsection{Abbreviations}  % You need to manually change the paragraph style to "Normal" in Word
+
+NLP: Natural Language Processing
+
+NER: Named Entity Recognition
+
+% \subsection{Multimedia Appendix}
+
+\subsection{References}
+
+\bibliographystyle{ama}
+\bibliography{jmir}
+
+\end{document}
